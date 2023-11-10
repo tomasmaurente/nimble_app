@@ -11,6 +11,7 @@ import androidx.navigation.ui.navigateUp
 import android.view.Menu
 import android.view.MenuItem
 import androidx.core.view.WindowCompat
+import androidx.core.view.WindowInsetsCompat
 import com.example.nimble.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -24,17 +25,17 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
-            binding.layout.background.setRenderEffect(RenderEffect.createBlurEffect(20.0f,20.0f,Shader.TileMode.MIRROR))
-        }
-
         val navController = findNavController(R.id.nav_host_fragment_content_main)
         appBarConfiguration = AppBarConfiguration(navController.graph)
+
 
         WindowCompat.setDecorFitsSystemWindows(
             window,
             false
         )
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            window.insetsController?.hide(WindowInsetsCompat.Type.systemBars())
+        }
 
     }
 

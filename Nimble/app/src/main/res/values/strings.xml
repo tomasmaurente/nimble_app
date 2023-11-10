@@ -12,7 +12,15 @@
     <string name="password">Password</string>
     <string name="forgot">Forgot?</string>
 
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <!-- Survey Presentation Screen -->
+    <string name="dayMonthText">Monday, June 15</string>
+    <string name="todayText">Today</string>
+    <string name="titleText">Working from home Check-in</string>
+    <string name="subtitleText">We would like to know how you feel about our work from home...</string>
+
+    <!-- Survey Beginning Screen -->
+    <string name="button_text">Start Survey</string>
+    <string name="subtitle_text">We would like to know how you feel about our work from home (WFH) experience.</string>
+    <string name="title_text">Working from home Check-In</string>
 
 </resources>

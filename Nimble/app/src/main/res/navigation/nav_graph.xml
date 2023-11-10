@@ -3,26 +3,39 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/LoginScreen">
 
     <fragment
-        android:id="@+id/FirstFragment"
-        android:name="com.example.nimble.FirstFragment"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
+        android:id="@+id/LoginScreen"
+        android:name="com.example.nimble.fragments.LoginScreenFragment"
+        tools:layout="@layout/fragment_login_screen">
 
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            android:id="@+id/action_LoginScreen_to_SurveyPresentationScreen"
+            app:destination="@id/SurveyPresentationScreen" />
     </fragment>
+
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="com.example.nimble.SecondFragment"
+        android:id="@+id/SurveyPresentationScreen"
+        android:name="com.example.nimble.fragments.SurveyPresentationFragment"
+        tools:layout="@layout/fragment_survey_presentation">
+
+        <action
+            android:id="@+id/action_SurveyPresentationScreen_to_SurveyBeginningScreen"
+            app:destination="@id/SurveyBeginningScreen" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/SurveyBeginningScreen"
+        android:name="com.example.nimble.fragments.SurveyBeginningFragment"
         android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
+        tools:layout="@layout/fragment_survey_beginnig">
 
         <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            android:id="@+id/action_SurveyBeginningScreen_to_SurveyPresentationScreen"
+            app:destination="@id/SurveyPresentationScreen" />
     </fragment>
+
+
 </navigation>
